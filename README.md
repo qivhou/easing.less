@@ -5,164 +5,164 @@ First of all, thanks [ai](https://github.com/ai/) and the great site [easings.ne
 Why not have a easing lib/mixins for Less? so I do it.
 
 ##Usage
-1. To use easing.less in your project, simply add the line into your own less file.
+1.  To use easing.less in your project, simply add the line into your own less file.
 
-```css
-@import “easing.less”
-```
-2. Use `.transition-timing-function` or `.animation-timing-function` mixins and available easing keywords as below.
+    ```css
+    @import "easing.less";
+    ```
+2.  Use `.transition-timing-function` or `.animation-timing-function` mixins and available easing keywords as below.
 
-```less
-@import "../easing.less";
+    ```css
+    @import "../easing.less";
+    
+    @keyframes bounce {
+        0%, 20%, 53%, 80%, 100% {
+            .transition-timing-function(easeOutCubic);
+            transform: translate3d(0, 0, 0);
+        }
+        40%, 43% {
+            .transition-timing-function(easeInQuint);
+            transform: translate3d(0, -30px, 0);
+        }
+        70% {
+            .transition-timing-function(easeInQuint);
+            transform: translate3d(0, -15px, 0);
+        }
+        90% {
+            transform: translate3d(0, -4px, 0);
+        }
+    }
+    
+    .bounce {
+        animation-name: bounce;
+        transform-origin: center bottom;
+    }
+    ```
 
-@keyframes bounce {
-    0%, 20%, 53%, 80%, 100% {
-        .transition-timing-function(easeOutCubic);
+    then, after you run the `lessc less-file.less` to compile , you will get following output.
+
+    ```css
+    @keyframes bounce {
+      0%,
+      20%,
+      53%,
+      80%,
+      100% {
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        -moz-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        -o-transition-timing-funtion: cubic-bezier(0.215, 0.61, 0.355, 1);
         transform: translate3d(0, 0, 0);
-    }
-    40%, 43% {
-        .transition-timing-function(easeInQuint);
+      }
+      40%,
+      43% {
+        transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -moz-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -o-transition-timing-funtion: cubic-bezier(0.755, 0.05, 0.855, 0.06);
         transform: translate3d(0, -30px, 0);
-    }
-    70% {
-        .transition-timing-function(easeInQuint);
+      }
+      70% {
+        transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -moz-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -o-transition-timing-funtion: cubic-bezier(0.755, 0.05, 0.855, 0.06);
         transform: translate3d(0, -15px, 0);
-    }
-    90% {
+      }
+      90% {
         transform: translate3d(0, -4px, 0);
+      }
     }
-}
+    .bounce {
+      animation-name: bounce;
+      transform-origin: center bottom;
+    }
+    ```
+3.  Also you can use the easing keyword variables, like below.
 
-.bounce {
-    animation-name: bounce;
-    transform-origin: center bottom;
-}
-```
+    ```css
+    @import "../easing.less";
+    
+    @keyframes bounce {
+        0%, 20%, 53%, 80%, 100% {
+            transition-timing-function: @easeOutCubic;
+            transform: translate3d(0, 0, 0);
+        }
+        40%, 43% {
+            transition-timing-function: @easeInQuint;
+            transform: translate3d(0, -30px, 0);
+        }
+        70% {
+            transition-timing-function: @easeInQuint;
+            transform: translate3d(0, -15px, 0);
+        }
+        90% {
+            transform: translate3d(0, -4px, 0);
+        }
+    }
+    
+    .bounce {
+        animation-name: bounce;
+        transform-origin: center bottom;
+    }
+    ```
+    you will get following output once you compile the less to css.
 
-then, after you run the `lessc less-file.less` to compile , you will get following output.
-
-```css
-@keyframes bounce {
-  0%,
-  20%,
-  53%,
-  80%,
-  100% {
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    -moz-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    -o-transition-timing-funtion: cubic-bezier(0.215, 0.61, 0.355, 1);
-    transform: translate3d(0, 0, 0);
-  }
-  40%,
-  43% {
-    transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    -webkit-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    -moz-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    -o-transition-timing-funtion: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    transform: translate3d(0, -30px, 0);
-  }
-  70% {
-    transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    -webkit-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    -moz-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    -o-transition-timing-funtion: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    transform: translate3d(0, -15px, 0);
-  }
-  90% {
-    transform: translate3d(0, -4px, 0);
-  }
-}
-.bounce {
-  animation-name: bounce;
-  transform-origin: center bottom;
-}
-```
-3. Also, you can use the easing keyword variables, like below.
-
-```less
-@import "../easing.less";
-
-@keyframes bounce {
-    0%, 20%, 53%, 80%, 100% {
-        transition-timing-function: @easeOutCubic;
+    ```css
+    @keyframes bounce {
+      0%,
+      20%,
+      53%,
+      80%,
+      100% {
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
         transform: translate3d(0, 0, 0);
-    }
-    40%, 43% {
-        transition-timing-function: @easeInQuint;
+      }
+      40%,
+      43% {
+        transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
         transform: translate3d(0, -30px, 0);
-    }
-    70% {
-        transition-timing-function: @easeInQuint;
+      }
+      70% {
+        transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
         transform: translate3d(0, -15px, 0);
-    }
-    90% {
+      }
+      90% {
         transform: translate3d(0, -4px, 0);
+      }
     }
-}
-
-.bounce {
-    animation-name: bounce;
-    transform-origin: center bottom;
-}
-```
-you will get following output once you compile the less to css.
-
-```css
-@keyframes bounce {
-  0%,
-  20%,
-  53%,
-  80%,
-  100% {
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    transform: translate3d(0, 0, 0);
-  }
-  40%,
-  43% {
-    transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    transform: translate3d(0, -30px, 0);
-  }
-  70% {
-    transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    transform: translate3d(0, -15px, 0);
-  }
-  90% {
-    transform: translate3d(0, -4px, 0);
-  }
-}
-.bounce {
-  animation-name: bounce;
-  transform-origin: center bottom;
-}
-```
+    .bounce {
+      animation-name: bounce;
+      transform-origin: center bottom;
+    }
+    ```
 
 ##Get your own easing curve
 
-The easy way it to go [cubic-bezier.com](http://cubic-bezier.com), then you can play and get the easing curve you need, actually, you get just 4 numbers like `.17, .67, .83, .67`, and you need to think about an appropriate name for it. :O)
+The easy way to get it is to go [cubic-bezier.com](http://cubic-bezier.com). Then you can play and get the easing curve you need, actually, you get just 4 numbers like `.17, .67, .83, .67`, and you need to think about an appropriate name for it. :O)
 
 ##Add your easing curve to easing.less
 
-1. Clone the repo on your local.
-2. Run following command to install the dependencies.
+1.  Clone the repo on your local.
+2.  Run following command to install the dependencies.
 
-```bash
-npm install
-```
+    ```bash
+    npm install
+    ```
 
-3. Add the easing settings to file ‘easings.json’ in JSON style, like below, make sure your name is not duplicated with others.
+3.  Add the easing settings to file ‘easings.json’ in JSON style, like below, make sure your name is not duplicated with others.
 
-```json
-    “new-easing-name” : “x1, y1, x2, y2”
-```
+    ```javascript
+        "new-ease-out": "0, 0.58, 0.58, 1"
+    ```
 
-4. Run command below to build the easing.less file.
+4.  Run command below to build the easing.less file.
 
-```bash
-grunt
-```
+    ```bash
+    grunt
+    ```
 
-5. Done. You already get the new easing.less with your customized curves.
+5.  Done. You already get the new easing.less with your customized curves.
 
 ##Cheat Sheet
 
@@ -200,7 +200,5 @@ grunt
 ```
 
 ## Live Demo
-
-In Progress...
-
+So far, there’s only 2 less pages under demo folder, the live demo is in progress...
 
