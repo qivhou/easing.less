@@ -1,141 +1,553 @@
-@default: ease; //use ease as default for names not in the list
+//use ease as default for names not in the list
+@default: ease; 
+
+// native easing options
+
+@ease: ease;
+
+.transition-timing-function(ease){
+    transition-timing-function : @ease;
+    -webkit-transition-timing-function : @ease;
+    -moz-transition-timing-function : @ease;
+    -o-transition-timing-funtion : @ease;
+}
+
+.animation-timing-function(ease){
+    animation-timing-function : @ease;
+    -webkit-animation-timing-function : @ease;
+    -moz-animation-timing-function : @ease;
+    -o-animation-timing-function : @ease;
+}
+
+@linear: linear;
+
+.transition-timing-function(linear){
+    transition-timing-function : @linear;
+    -webkit-transition-timing-function : @linear;
+    -moz-transition-timing-function : @linear;
+    -o-transition-timing-funtion : @linear;
+}
+
+.animation-timing-function(linear){
+    animation-timing-function : @linear;
+    -webkit-animation-timing-function : @linear;
+    -moz-animation-timing-function : @linear;
+    -o-animation-timing-function : @linear;
+}
+
+@ease-in: ease-in;
+
+.transition-timing-function(ease-in){
+    transition-timing-function : @ease-in;
+    -webkit-transition-timing-function : @ease-in;
+    -moz-transition-timing-function : @ease-in;
+    -o-transition-timing-funtion : @ease-in;
+}
+
+.animation-timing-function(ease-in){
+    animation-timing-function : @ease-in;
+    -webkit-animation-timing-function : @ease-in;
+    -moz-animation-timing-function : @ease-in;
+    -o-animation-timing-function : @ease-in;
+}
+
+@ease-out: ease-out;
+
+.transition-timing-function(ease-out){
+    transition-timing-function : @ease-out;
+    -webkit-transition-timing-function : @ease-out;
+    -moz-transition-timing-function : @ease-out;
+    -o-transition-timing-funtion : @ease-out;
+}
+
+.animation-timing-function(ease-out){
+    animation-timing-function : @ease-out;
+    -webkit-animation-timing-function : @ease-out;
+    -moz-animation-timing-function : @ease-out;
+    -o-animation-timing-function : @ease-out;
+}
+
+@ease-in-out: ease-in-out;
+
+.transition-timing-function(ease-in-out){
+    transition-timing-function : @ease-in-out;
+    -webkit-transition-timing-function : @ease-in-out;
+    -moz-transition-timing-function : @ease-in-out;
+    -o-transition-timing-funtion : @ease-in-out;
+}
+
+.animation-timing-function(ease-in-out){
+    animation-timing-function : @ease-in-out;
+    -webkit-animation-timing-function : @ease-in-out;
+    -moz-animation-timing-function : @ease-in-out;
+    -o-animation-timing-function : @ease-in-out;
+}
 
 
-.ease, .cubic-bezier(@name) when (@name = ease) {
-    cubic-bezier(0.25, 1, 0.25, 1);
-};
+
+@ease : cubic-bezier(0.25, 1, 0.25, 1);
+
+.transition-timing-function(ease){
+    transition-timing-function : @ease;
+    -webkit-transition-timing-function : @ease;
+    -moz-transition-timing-function : @ease;
+    -o-transition-timing-funtion : @ease;
+}
+
+.animation-timing-function(ease){
+    animation-timing-function : @ease;
+    -webkit-animation-timing-function : @ease;
+    -moz-animation-timing-function : @ease;
+    -o-animation-timing-function : @ease;
+}
 
 
-.linear, .cubic-bezier(@name) when (@name = linear) {
-    cubic-bezier(0, 0, 1, 1);
-};
+@linear : cubic-bezier(0, 0, 1, 1);
+
+.transition-timing-function(linear){
+    transition-timing-function : @linear;
+    -webkit-transition-timing-function : @linear;
+    -moz-transition-timing-function : @linear;
+    -o-transition-timing-funtion : @linear;
+}
+
+.animation-timing-function(linear){
+    animation-timing-function : @linear;
+    -webkit-animation-timing-function : @linear;
+    -moz-animation-timing-function : @linear;
+    -o-animation-timing-function : @linear;
+}
 
 
-.ease-in, .cubic-bezier(@name) when (@name = ease-in) {
-    cubic-bezier(0.42, 0, 1, 1);
-};
+@ease-in : cubic-bezier(0.42, 0, 1, 1);
+
+.transition-timing-function(ease-in){
+    transition-timing-function : @ease-in;
+    -webkit-transition-timing-function : @ease-in;
+    -moz-transition-timing-function : @ease-in;
+    -o-transition-timing-funtion : @ease-in;
+}
+
+.animation-timing-function(ease-in){
+    animation-timing-function : @ease-in;
+    -webkit-animation-timing-function : @ease-in;
+    -moz-animation-timing-function : @ease-in;
+    -o-animation-timing-function : @ease-in;
+}
 
 
-.ease-out, .cubic-bezier(@name) when (@name = ease-out) {
-    cubic-bezier(0, 0, 0.58, 1);
-};
+@ease-out : cubic-bezier(0, 0, 0.58, 1);
+
+.transition-timing-function(ease-out){
+    transition-timing-function : @ease-out;
+    -webkit-transition-timing-function : @ease-out;
+    -moz-transition-timing-function : @ease-out;
+    -o-transition-timing-funtion : @ease-out;
+}
+
+.animation-timing-function(ease-out){
+    animation-timing-function : @ease-out;
+    -webkit-animation-timing-function : @ease-out;
+    -moz-animation-timing-function : @ease-out;
+    -o-animation-timing-function : @ease-out;
+}
 
 
-.easeInSine, .cubic-bezier(@name) when (@name = easeInSine) {
-    cubic-bezier(0.47, 0, 0.745, 0.715);
-};
+@easeInSine : cubic-bezier(0.47, 0, 0.745, 0.715);
+
+.transition-timing-function(easeInSine){
+    transition-timing-function : @easeInSine;
+    -webkit-transition-timing-function : @easeInSine;
+    -moz-transition-timing-function : @easeInSine;
+    -o-transition-timing-funtion : @easeInSine;
+}
+
+.animation-timing-function(easeInSine){
+    animation-timing-function : @easeInSine;
+    -webkit-animation-timing-function : @easeInSine;
+    -moz-animation-timing-function : @easeInSine;
+    -o-animation-timing-function : @easeInSine;
+}
 
 
-.easeOutSine, .cubic-bezier(@name) when (@name = easeOutSine) {
-    cubic-bezier(0.39, 0.575, 0.565, 1);
-};
+@easeOutSine : cubic-bezier(0.39, 0.575, 0.565, 1);
+
+.transition-timing-function(easeOutSine){
+    transition-timing-function : @easeOutSine;
+    -webkit-transition-timing-function : @easeOutSine;
+    -moz-transition-timing-function : @easeOutSine;
+    -o-transition-timing-funtion : @easeOutSine;
+}
+
+.animation-timing-function(easeOutSine){
+    animation-timing-function : @easeOutSine;
+    -webkit-animation-timing-function : @easeOutSine;
+    -moz-animation-timing-function : @easeOutSine;
+    -o-animation-timing-function : @easeOutSine;
+}
 
 
-.easeInOutSine, .cubic-bezier(@name) when (@name = easeInOutSine) {
-    cubic-bezier(0.445, 0.05, 0.55, 0.95);
-};
+@easeInOutSine : cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+.transition-timing-function(easeInOutSine){
+    transition-timing-function : @easeInOutSine;
+    -webkit-transition-timing-function : @easeInOutSine;
+    -moz-transition-timing-function : @easeInOutSine;
+    -o-transition-timing-funtion : @easeInOutSine;
+}
+
+.animation-timing-function(easeInOutSine){
+    animation-timing-function : @easeInOutSine;
+    -webkit-animation-timing-function : @easeInOutSine;
+    -moz-animation-timing-function : @easeInOutSine;
+    -o-animation-timing-function : @easeInOutSine;
+}
 
 
-.easeInQuad, .cubic-bezier(@name) when (@name = easeInQuad) {
-    cubic-bezier(0.55, 0.085, 0.68, 0.53);
-};
+@easeInQuad : cubic-bezier(0.55, 0.085, 0.68, 0.53);
+
+.transition-timing-function(easeInQuad){
+    transition-timing-function : @easeInQuad;
+    -webkit-transition-timing-function : @easeInQuad;
+    -moz-transition-timing-function : @easeInQuad;
+    -o-transition-timing-funtion : @easeInQuad;
+}
+
+.animation-timing-function(easeInQuad){
+    animation-timing-function : @easeInQuad;
+    -webkit-animation-timing-function : @easeInQuad;
+    -moz-animation-timing-function : @easeInQuad;
+    -o-animation-timing-function : @easeInQuad;
+}
 
 
-.easeOutQuad, .cubic-bezier(@name) when (@name = easeOutQuad) {
-    cubic-bezier(0.25, 0.46, 0.45, 0.94);
-};
+@easeOutQuad : cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+.transition-timing-function(easeOutQuad){
+    transition-timing-function : @easeOutQuad;
+    -webkit-transition-timing-function : @easeOutQuad;
+    -moz-transition-timing-function : @easeOutQuad;
+    -o-transition-timing-funtion : @easeOutQuad;
+}
+
+.animation-timing-function(easeOutQuad){
+    animation-timing-function : @easeOutQuad;
+    -webkit-animation-timing-function : @easeOutQuad;
+    -moz-animation-timing-function : @easeOutQuad;
+    -o-animation-timing-function : @easeOutQuad;
+}
 
 
-.easeInOutQuad, .cubic-bezier(@name) when (@name = easeInOutQuad) {
-    cubic-bezier(0.455, 0.03, 0.515, 0.955);
-};
+@easeInOutQuad : cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+.transition-timing-function(easeInOutQuad){
+    transition-timing-function : @easeInOutQuad;
+    -webkit-transition-timing-function : @easeInOutQuad;
+    -moz-transition-timing-function : @easeInOutQuad;
+    -o-transition-timing-funtion : @easeInOutQuad;
+}
+
+.animation-timing-function(easeInOutQuad){
+    animation-timing-function : @easeInOutQuad;
+    -webkit-animation-timing-function : @easeInOutQuad;
+    -moz-animation-timing-function : @easeInOutQuad;
+    -o-animation-timing-function : @easeInOutQuad;
+}
 
 
-.easeInCubic, .cubic-bezier(@name) when (@name = easeInCubic) {
-    cubic-bezier(0.55, 0.055, 0.675, 0.19);
-};
+@easeInCubic : cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+.transition-timing-function(easeInCubic){
+    transition-timing-function : @easeInCubic;
+    -webkit-transition-timing-function : @easeInCubic;
+    -moz-transition-timing-function : @easeInCubic;
+    -o-transition-timing-funtion : @easeInCubic;
+}
+
+.animation-timing-function(easeInCubic){
+    animation-timing-function : @easeInCubic;
+    -webkit-animation-timing-function : @easeInCubic;
+    -moz-animation-timing-function : @easeInCubic;
+    -o-animation-timing-function : @easeInCubic;
+}
 
 
-.easeOutCubic, .cubic-bezier(@name) when (@name = easeOutCubic) {
-    cubic-bezier(0.215, 0.61, 0.355, 1);
-};
+@easeOutCubic : cubic-bezier(0.215, 0.61, 0.355, 1);
+
+.transition-timing-function(easeOutCubic){
+    transition-timing-function : @easeOutCubic;
+    -webkit-transition-timing-function : @easeOutCubic;
+    -moz-transition-timing-function : @easeOutCubic;
+    -o-transition-timing-funtion : @easeOutCubic;
+}
+
+.animation-timing-function(easeOutCubic){
+    animation-timing-function : @easeOutCubic;
+    -webkit-animation-timing-function : @easeOutCubic;
+    -moz-animation-timing-function : @easeOutCubic;
+    -o-animation-timing-function : @easeOutCubic;
+}
 
 
-.easeInOutCubic, .cubic-bezier(@name) when (@name = easeInOutCubic) {
-    cubic-bezier(0.645, 0.045, 0.355, 1);
-};
+@easeInOutCubic : cubic-bezier(0.645, 0.045, 0.355, 1);
+
+.transition-timing-function(easeInOutCubic){
+    transition-timing-function : @easeInOutCubic;
+    -webkit-transition-timing-function : @easeInOutCubic;
+    -moz-transition-timing-function : @easeInOutCubic;
+    -o-transition-timing-funtion : @easeInOutCubic;
+}
+
+.animation-timing-function(easeInOutCubic){
+    animation-timing-function : @easeInOutCubic;
+    -webkit-animation-timing-function : @easeInOutCubic;
+    -moz-animation-timing-function : @easeInOutCubic;
+    -o-animation-timing-function : @easeInOutCubic;
+}
 
 
-.easeInQuart, .cubic-bezier(@name) when (@name = easeInQuart) {
-    cubic-bezier(0.895, 0.03, 0.685, 0.22);
-};
+@easeInQuart : cubic-bezier(0.895, 0.03, 0.685, 0.22);
+
+.transition-timing-function(easeInQuart){
+    transition-timing-function : @easeInQuart;
+    -webkit-transition-timing-function : @easeInQuart;
+    -moz-transition-timing-function : @easeInQuart;
+    -o-transition-timing-funtion : @easeInQuart;
+}
+
+.animation-timing-function(easeInQuart){
+    animation-timing-function : @easeInQuart;
+    -webkit-animation-timing-function : @easeInQuart;
+    -moz-animation-timing-function : @easeInQuart;
+    -o-animation-timing-function : @easeInQuart;
+}
 
 
-.easeOutQuart, .cubic-bezier(@name) when (@name = easeOutQuart) {
-    cubic-bezier(0.165, 0.84, 0.44, 1);
-};
+@easeOutQuart : cubic-bezier(0.165, 0.84, 0.44, 1);
+
+.transition-timing-function(easeOutQuart){
+    transition-timing-function : @easeOutQuart;
+    -webkit-transition-timing-function : @easeOutQuart;
+    -moz-transition-timing-function : @easeOutQuart;
+    -o-transition-timing-funtion : @easeOutQuart;
+}
+
+.animation-timing-function(easeOutQuart){
+    animation-timing-function : @easeOutQuart;
+    -webkit-animation-timing-function : @easeOutQuart;
+    -moz-animation-timing-function : @easeOutQuart;
+    -o-animation-timing-function : @easeOutQuart;
+}
 
 
-.easeInOutQuat, .cubic-bezier(@name) when (@name = easeInOutQuat) {
-    cubic-bezier(0.77, 0, 0.175, 1);
-};
+@easeInOutQuat : cubic-bezier(0.77, 0, 0.175, 1);
+
+.transition-timing-function(easeInOutQuat){
+    transition-timing-function : @easeInOutQuat;
+    -webkit-transition-timing-function : @easeInOutQuat;
+    -moz-transition-timing-function : @easeInOutQuat;
+    -o-transition-timing-funtion : @easeInOutQuat;
+}
+
+.animation-timing-function(easeInOutQuat){
+    animation-timing-function : @easeInOutQuat;
+    -webkit-animation-timing-function : @easeInOutQuat;
+    -moz-animation-timing-function : @easeInOutQuat;
+    -o-animation-timing-function : @easeInOutQuat;
+}
 
 
-.easeInQuint, .cubic-bezier(@name) when (@name = easeInQuint) {
-    cubic-bezier(0.755, 0.05, 0.855, 0.06);
-};
+@easeInQuint : cubic-bezier(0.755, 0.05, 0.855, 0.06);
+
+.transition-timing-function(easeInQuint){
+    transition-timing-function : @easeInQuint;
+    -webkit-transition-timing-function : @easeInQuint;
+    -moz-transition-timing-function : @easeInQuint;
+    -o-transition-timing-funtion : @easeInQuint;
+}
+
+.animation-timing-function(easeInQuint){
+    animation-timing-function : @easeInQuint;
+    -webkit-animation-timing-function : @easeInQuint;
+    -moz-animation-timing-function : @easeInQuint;
+    -o-animation-timing-function : @easeInQuint;
+}
 
 
-.easeOutQuint, .cubic-bezier(@name) when (@name = easeOutQuint) {
-    cubic-bezier(0.23, 1, 0.32, 1);
-};
+@easeOutQuint : cubic-bezier(0.23, 1, 0.32, 1);
+
+.transition-timing-function(easeOutQuint){
+    transition-timing-function : @easeOutQuint;
+    -webkit-transition-timing-function : @easeOutQuint;
+    -moz-transition-timing-function : @easeOutQuint;
+    -o-transition-timing-funtion : @easeOutQuint;
+}
+
+.animation-timing-function(easeOutQuint){
+    animation-timing-function : @easeOutQuint;
+    -webkit-animation-timing-function : @easeOutQuint;
+    -moz-animation-timing-function : @easeOutQuint;
+    -o-animation-timing-function : @easeOutQuint;
+}
 
 
-.easeInExpo, .cubic-bezier(@name) when (@name = easeInExpo) {
-    cubic-bezier(0.95, 0.05, 0.795, 0..035);
-};
+@easeInExpo : cubic-bezier(0.95, 0.05, 0.795, 0.035);
+
+.transition-timing-function(easeInExpo){
+    transition-timing-function : @easeInExpo;
+    -webkit-transition-timing-function : @easeInExpo;
+    -moz-transition-timing-function : @easeInExpo;
+    -o-transition-timing-funtion : @easeInExpo;
+}
+
+.animation-timing-function(easeInExpo){
+    animation-timing-function : @easeInExpo;
+    -webkit-animation-timing-function : @easeInExpo;
+    -moz-animation-timing-function : @easeInExpo;
+    -o-animation-timing-function : @easeInExpo;
+}
 
 
-.easeOutExpo, .cubic-bezier(@name) when (@name = easeOutExpo) {
-    cubic-bezier(0.19, 1, 0.22, 1);
-};
+@easeOutExpo : cubic-bezier(0.19, 1, 0.22, 1);
+
+.transition-timing-function(easeOutExpo){
+    transition-timing-function : @easeOutExpo;
+    -webkit-transition-timing-function : @easeOutExpo;
+    -moz-transition-timing-function : @easeOutExpo;
+    -o-transition-timing-funtion : @easeOutExpo;
+}
+
+.animation-timing-function(easeOutExpo){
+    animation-timing-function : @easeOutExpo;
+    -webkit-animation-timing-function : @easeOutExpo;
+    -moz-animation-timing-function : @easeOutExpo;
+    -o-animation-timing-function : @easeOutExpo;
+}
 
 
-.easeInOutExpo, .cubic-bezier(@name) when (@name = easeInOutExpo) {
-    cubic-bezier(1, 0, 0, 1);
-};
+@easeInOutExpo : cubic-bezier(1, 0, 0, 1);
+
+.transition-timing-function(easeInOutExpo){
+    transition-timing-function : @easeInOutExpo;
+    -webkit-transition-timing-function : @easeInOutExpo;
+    -moz-transition-timing-function : @easeInOutExpo;
+    -o-transition-timing-funtion : @easeInOutExpo;
+}
+
+.animation-timing-function(easeInOutExpo){
+    animation-timing-function : @easeInOutExpo;
+    -webkit-animation-timing-function : @easeInOutExpo;
+    -moz-animation-timing-function : @easeInOutExpo;
+    -o-animation-timing-function : @easeInOutExpo;
+}
 
 
-.easeInCirc, .cubic-bezier(@name) when (@name = easeInCirc) {
-    cubic-bezier(0.6, 0.04, 0.98, 0.335);
-};
+@easeInCirc : cubic-bezier(0.6, 0.04, 0.98, 0.335);
+
+.transition-timing-function(easeInCirc){
+    transition-timing-function : @easeInCirc;
+    -webkit-transition-timing-function : @easeInCirc;
+    -moz-transition-timing-function : @easeInCirc;
+    -o-transition-timing-funtion : @easeInCirc;
+}
+
+.animation-timing-function(easeInCirc){
+    animation-timing-function : @easeInCirc;
+    -webkit-animation-timing-function : @easeInCirc;
+    -moz-animation-timing-function : @easeInCirc;
+    -o-animation-timing-function : @easeInCirc;
+}
 
 
-.easeOutCirc, .cubic-bezier(@name) when (@name = easeOutCirc) {
-    cubic-bezier(0.075, 0.82, 0.165, 1);
-};
+@easeOutCirc : cubic-bezier(0.075, 0.82, 0.165, 1);
+
+.transition-timing-function(easeOutCirc){
+    transition-timing-function : @easeOutCirc;
+    -webkit-transition-timing-function : @easeOutCirc;
+    -moz-transition-timing-function : @easeOutCirc;
+    -o-transition-timing-funtion : @easeOutCirc;
+}
+
+.animation-timing-function(easeOutCirc){
+    animation-timing-function : @easeOutCirc;
+    -webkit-animation-timing-function : @easeOutCirc;
+    -moz-animation-timing-function : @easeOutCirc;
+    -o-animation-timing-function : @easeOutCirc;
+}
 
 
-.easeInOutCirc, .cubic-bezier(@name) when (@name = easeInOutCirc) {
-    cubic-bezier(0.785, 0.135, 0.15, 0.86);
-};
+@easeInOutCirc : cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+.transition-timing-function(easeInOutCirc){
+    transition-timing-function : @easeInOutCirc;
+    -webkit-transition-timing-function : @easeInOutCirc;
+    -moz-transition-timing-function : @easeInOutCirc;
+    -o-transition-timing-funtion : @easeInOutCirc;
+}
+
+.animation-timing-function(easeInOutCirc){
+    animation-timing-function : @easeInOutCirc;
+    -webkit-animation-timing-function : @easeInOutCirc;
+    -moz-animation-timing-function : @easeInOutCirc;
+    -o-animation-timing-function : @easeInOutCirc;
+}
 
 
-.easeInBack, .cubic-bezier(@name) when (@name = easeInBack) {
-    cubic-bezier(0.6, -0.28, 0.735, 0.045);
-};
+@easeInBack : cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+.transition-timing-function(easeInBack){
+    transition-timing-function : @easeInBack;
+    -webkit-transition-timing-function : @easeInBack;
+    -moz-transition-timing-function : @easeInBack;
+    -o-transition-timing-funtion : @easeInBack;
+}
+
+.animation-timing-function(easeInBack){
+    animation-timing-function : @easeInBack;
+    -webkit-animation-timing-function : @easeInBack;
+    -moz-animation-timing-function : @easeInBack;
+    -o-animation-timing-function : @easeInBack;
+}
 
 
-.easeOutBack, .cubic-bezier(@name) when (@name = easeOutBack) {
-    cubic-bezier(0.175, 0.885, 0.32, 1.275);
-};
+@easeOutBack : cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+.transition-timing-function(easeOutBack){
+    transition-timing-function : @easeOutBack;
+    -webkit-transition-timing-function : @easeOutBack;
+    -moz-transition-timing-function : @easeOutBack;
+    -o-transition-timing-funtion : @easeOutBack;
+}
+
+.animation-timing-function(easeOutBack){
+    animation-timing-function : @easeOutBack;
+    -webkit-animation-timing-function : @easeOutBack;
+    -moz-animation-timing-function : @easeOutBack;
+    -o-animation-timing-function : @easeOutBack;
+}
 
 
-.easeInOutBack, .cubic-bezier(@name) when (@name = easeInOutBack) {
-    cubic-bezier(0.68, -0.55, 0.265, 1.55);
-};
+@easeInOutBack : cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+.transition-timing-function(easeInOutBack){
+    transition-timing-function : @easeInOutBack;
+    -webkit-transition-timing-function : @easeInOutBack;
+    -moz-transition-timing-function : @easeInOutBack;
+    -o-transition-timing-funtion : @easeInOutBack;
+}
+
+.animation-timing-function(easeInOutBack){
+    animation-timing-function : @easeInOutBack;
+    -webkit-animation-timing-function : @easeInOutBack;
+    -moz-animation-timing-function : @easeInOutBack;
+    -o-animation-timing-function : @easeInOutBack;
+}
 
 
-.cubic-bezier(@name) when(defaut()){
-    .cubic-bezier(@default);
+.transition-timing-function(@name) when(default()){
+    .transition-timing-function(@default);
+}
+
+.animation-timing-function(@name) when(default()){
+    .transition-timing-function(@default);
 }
