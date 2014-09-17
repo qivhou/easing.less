@@ -3,6 +3,7 @@
 First of all, thanks [ai](https://github.com/ai/) and the great site [easings.net](http://easings.net), it offers a good site/tool to help developers choose the right easing function. This repo inspired by it also another great site [cubic-bezier.com](http://cubic-bezier.com).
 
 Why not have a easing lib/mixins for Less? so I do it.
+![Get all the easings in LESS by easing.less](easing.less.png)
 
 ##Usage
 1.  To use easing.less in your project, simply add the line into your own less file.
